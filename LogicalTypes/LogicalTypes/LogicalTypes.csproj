@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup Label="Identity">
+		<Product>Rem.Core.ComponentModel.Logical</Product>
+		<PackageId>Rem.Core.ComponentModel.Logical</PackageId>
+		<RootNamespace>Rem.Core.ComponentModel.Logical</RootNamespace>
+		<Version>1.0</Version>
+		<Description>
+			Provides a series of logical types (AND / union, OR / intersection, NOT / complement) useful in common .NET programming scenarios.
+		</Description>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<Authors>Richard E. Munson</Authors>
+		<Copyright>Richard E. Munson, 2022</Copyright>
+		<PackageTags>logical;componentmodel;union;intersection;complement</PackageTags>
+	</PropertyGroup>
+
+	<PropertyGroup Label="Outputs">
+		<TargetFrameworks>net461;netstandard2.0</TargetFrameworks>
+		<OutputType>Library</OutputType>
+		<PackageReleaseNotes>
+			Created the package.
+		</PackageReleaseNotes>
+	</PropertyGroup>
+
+	<PropertyGroup Label="Documentation" Condition="'$(Configuration)' == 'Release'">
+		<DocumentationFile>bin\Release\LogicalTypes.xml</DocumentationFile>
+	</PropertyGroup>
+
+	<PropertyGroup Label="Language">
+		<LangVersion>10.0</LangVersion>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+	</PropertyGroup>
+
+	<ItemGroup Condition="'$(TargetFramework)' == 'net461'">
+		<Using Remove="System.Net.Http" /><!-- This implicit using is for a package this library does not reference. -->
+	</ItemGroup>
+
+</Project>
