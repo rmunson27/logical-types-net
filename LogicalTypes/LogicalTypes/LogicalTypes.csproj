@@ -36,4 +36,8 @@
 		<Using Remove="System.Net.Http" /><!-- This implicit using is for a package this library does not reference. -->
 	</ItemGroup>
 
+	<ItemGroup Label="AllTargets">
+		<PackageReference Include="Rem.Core.Utilities.FluentThrower" Version="1.0.0" PrivateAssets="All" />
+	</ItemGroup>
+
 </Project>
