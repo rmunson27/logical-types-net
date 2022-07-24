@@ -15,7 +15,7 @@
 	</PropertyGroup>
 
 	<PropertyGroup Label="Outputs">
-		<TargetFrameworks>net461;netstandard2.0</TargetFrameworks>
+		<TargetFrameworks>net461;netstandard2.0;netcoreapp3.1;net5.0</TargetFrameworks>
 		<OutputType>Library</OutputType>
 		<PackageReleaseNotes>
 			Created the package.
@@ -32,11 +32,25 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 	</PropertyGroup>
 
+	<ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
+		<PackageReference Include="Nullable" Version="1.3.1">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+	</ItemGroup>
+
 	<ItemGroup Condition="'$(TargetFramework)' == 'net461'">
+		<PackageReference Include="Nullable" Version="1.3.1">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+
 		<Using Remove="System.Net.Http" /><!-- This implicit using is for a package this library does not reference. -->
 	</ItemGroup>
 
 	<ItemGroup Label="AllTargets">
+	    <PackageReference Include="Rem.Core.ComponentModel" Version="1.1.1.1" />
+		<PackageReference Include="Rem.Core.Utilities.Enums" Version="1.0.0" />
 		<PackageReference Include="Rem.Core.Utilities.FluentThrower" Version="1.0.0" PrivateAssets="All" />
 	</ItemGroup>
 
