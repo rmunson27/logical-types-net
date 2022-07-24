@@ -6,12 +6,12 @@
 		<RootNamespace>Rem.Core.ComponentModel.Logical</RootNamespace>
 		<Version>1.0</Version>
 		<Description>
-			Provides a series of logical types (AND / union, OR / intersection, NOT / complement) useful in common .NET programming scenarios.
+			Provides a series of logical types (AND / union, OR / intersection) useful in common .NET programming scenarios.
 		</Description>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<Authors>Richard E. Munson</Authors>
 		<Copyright>Richard E. Munson, 2022</Copyright>
-		<PackageTags>logical;componentmodel;union;intersection;complement</PackageTags>
+		<PackageTags>logical;componentmodel;union;intersection</PackageTags>
 	</PropertyGroup>
 
 	<PropertyGroup Label="Outputs">
